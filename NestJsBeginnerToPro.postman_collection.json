@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "f0bef2b4-cbe1-413e-90b3-5c7373c75f79",
+		"name": "NestJsBeginnerToPro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30284039"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/books?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "book 1",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/books/?id=65e84b4be26faffb6f8e91f2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "65e84b4be26faffb6f8e91f2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Book- 1\" ,\n    \"description\": \"Book 1 Description\",\n    \"author\": \"Author 1\" ,\n    \"price\": 100,\n    \"category\": \"Adventure\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"erensatir\",\n    \"email\": \"erensatir04@gmail.com\",\n    \"password\": \"373672\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Book- 1\" ,\n    \"description\": \"Book 1 Description\",\n    \"author\": \"Author 1\" ,\n    \"price\": 100,\n    \"category\": \"Adventure\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/books/65e84b4be26faffb6f8e91f2"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Book- 1\" ,\n    \"description\": \"Book 1 Description\",\n    \"author\": \"Author 1\" ,\n    \"price\": 100,\n    \"category\": \"Adventure\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/books/65e84b4be26faffb6f8e91f2"
+			},
+			"response": []
+		}
+	]
+}
